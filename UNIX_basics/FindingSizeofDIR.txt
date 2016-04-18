@@ -1,0 +1,14 @@
+
+To find the size of a directory and all directories and files below it, use the du command.
+
+The syntax works like:
+$ du <directory>
+
+for example:
+du /data2/microbiome/bacterial-typing-delivery/
+
+It will return the number of bytes back for how large the directory is e.g.:
+1301004726 /data2/microbiome/bacterial-typing-delivery/
+
+Sometimes this is not so helpful, to get a more human readable output, use du with the -h flag as follows:
+du -h /data2/microbiome/bacterial-typing-delivery/
