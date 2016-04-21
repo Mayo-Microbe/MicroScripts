@@ -1,0 +1,9 @@
+Modifying File Privlages - read, write, execute permissions
+
+When creating files, global premissions should not be assumed.  
+If the files that are created/generated are to be used by more than the immediate user, permissions must be granted.
+
+File permissons are designated in a 3 X 3 letter code:  the first set of three represents the logged-in users privalages; the second represents the group's privalages; and the third represents all users
+Example:  rwxrw-r-- would translate into full privalges for the logged in user read and write privalages for the group and read only for all users. Letters denote permission granted and dashes denote no permission,
+
+These can be altered by the creator or an administrator using the commands 'chmod' and 'chgrp'.
