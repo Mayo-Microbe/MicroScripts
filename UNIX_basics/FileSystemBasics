@@ -1,0 +1,23 @@
+# Pound is a comment and not interpreted in a bash script
+# Tell me where I currently am:
+$ pwd
+# show me the contents of where I currently am:
+$ ls
+# show an extended list of the files where I am:
+$ ls -al
+$ ls -alh
+# change to some other directory
+$ cd /path/to/someplace/
+# change to my home directory
+$ cd ~
+# change to the last directory I was in:
+$ cd -
+# move up one directory
+$ cd ..
+# show the history of commands I have used:
+$ history
+# Arrrow up / Arrow down, to go up or down in the commands we have used in the past
+# when typing is just 'too much'
+startofcommand<TAB>
+# Edit a file - note this is a totally different tutorial!
+$ vi /path/to/filename
