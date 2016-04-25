@@ -1,0 +1,22 @@
+Here is how you map reads (make sure you source the setup.env before you start):
+ 
+ 1042  micro_align_reads2reference -h
+ 1045  mkdir 6169
+ 1046  micro_align_reads2reference -r /data2/microbiome/brinkman/reference/Staphylococcus_aureus_MRSA252_uid57839/NC_002952.fna -i /data2/microbiome/workflow_runs/brinkman/6169/out/6169_pe.ec.keep.fq.gz -w /data2/microbiome/brinkman/mapping/6169/
+ 1047  history
+[m102417@franklin02 mapping]$ pwd
+/data2/microbiome/brinkman/mapping
+ 
+Here is how you call variants (with varscan)
+ 
+ 1049  micro_call_variants -h
+ 1050  micro_call_variants -m VarScan -t SNP -i /data2/microbiome/brinkman/mapping/6169/ -o 6169.vcf -s 6169 -c 20 -r 20
+ 1051  history
+[m102417@franklin02 mapping]$ pwd
+/data2/microbiome/brinkman/mapping
+ 
+Here is how you can count the number of variants:
+[m102417@franklin02 mapping]$ cat 6169.vcf | grep -v "#" | wc -l
+154
+ 
+That is AMAZINGLY low!  AWESOME SAUCE!
