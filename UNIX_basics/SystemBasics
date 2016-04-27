@@ -46,6 +46,23 @@ ls -ld *     List all the file and directory names in the current directory usin
 $ ls -al
 $ ls -alh
 
+# Looking for help: The man and apropos commands
+
+# Most of the commands have a manual page which give sometimes useful, often more or less 
+  detailed, sometimes cryptic and unfathomable discriptions of their usage. Some say they 
+  are called man pages because they are only for real men. 
+
+# Example:
+
+$ man ls      Shows the manual page for the ls command
+
+# You can search through the man pages using apropos
+
+# Example:
+
+$ apropos build     Shows a list of all the man pages whose discriptions contain the word "build"
+
+# Do a man apropos for detailed help on apropos.
 
 # show the history of commands I have used:
 $ history
@@ -54,5 +71,4 @@ $ history
 # when typing is just 'too much'
 startofcommand<TAB>
 
-# Edit a file - note this is a totally different tutorial!
-$ vi /path/to/filename
+
