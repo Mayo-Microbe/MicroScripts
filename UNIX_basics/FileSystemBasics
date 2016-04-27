@@ -1,23 +1,58 @@
 # Pound is a comment and not interpreted in a bash script
-# Tell me where I currently am:
-$ pwd
-# show me the contents of where I currently am:
-$ ls
+
+# Directories:
+# File and directory paths in UNIX use the forward slash "/" to separate directory names in a path.
+# examples:
+$ /              "root" directory
+$ /usr           directory usr (sub-directory of / "root" directory)
+$ /usr/STRIM100  STRIM100 is a subdirectory of /usr
+
+# Moving around the file system:
+$ pwd               Show the "present working directory", or current directory. Tell me where I currently am!
+$ cd                Change current directory to your HOME directory.
+$ cd /some/other    Change current directory to /some/other.
+$ cd INIT           Change current directory to INIT which is a sub-directory of the current 
+                        directory.
+$ cd ..             Change current directory to the parent directory of the current directory.
+$ cd $STRMWORK      Change current directory to the directory defined by the environment 
+                        variable 'STRMWORK'.
+$ cd ~bob           Change the current directory to the user bob's home directory (if you have permission).
+# change to the last directory I was in:
+$ cd -
+
+# Listing directory contents:
+$ ls    list a directory
+$ ls -l    list a directory in long ( detailed ) format
+# for example:
+$ ls -l 
+drwxr-xr-x    4 cliff    user        1024 Jun 18 09:40 WAITRON_EARNINGS
+-rw-r--r--    1 cliff    user      767392 Jun  6 14:28 scanlib.tar.gz
+^ ^  ^  ^     ^   ^       ^           ^      ^    ^      ^
+| |  |  |     |   |       |           |      |    |      |  
+| |  |  |     | owner   group       size   date  time    name 
+| |  |  |     number of links to file or directory contents
+| |  |  permissions for world
+| |  permissions for members of group
+| permissions for owner of file: r = read, w = write, x = execute -=no permission
+type of file: - = normal file, d=directory, l = symbolic link, and others...
+
+ls -a        List the current directory including hidden files. Hidden files start 
+             with "." 
+ls -ld *     List all the file and directory names in the current directory using 
+             long format. Without the "d" option, ls would list the contents 
+             of any sub-directory of the current. With the "d" option, ls 
+             just lists them like regular files.
 # show an extended list of the files where I am:
 $ ls -al
 $ ls -alh
-# change to some other directory
-$ cd /path/to/someplace/
-# change to my home directory
-$ cd ~
-# change to the last directory I was in:
-$ cd -
-# move up one directory
-$ cd ..
+
+
 # show the history of commands I have used:
 $ history
+
 # Arrrow up / Arrow down, to go up or down in the commands we have used in the past
 # when typing is just 'too much'
 startofcommand<TAB>
+
 # Edit a file - note this is a totally different tutorial!
 $ vi /path/to/filename
