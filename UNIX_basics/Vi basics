@@ -1,7 +1,9 @@
+# Edit a file 
+
 # Basics of the  vi editor
 
 # Opening a file:
-$ vi filename
+$ vi /path/to/filename
 
 # Creating text 
 # Edit modes: These keys enter editing modes and type in the text of your document. 
