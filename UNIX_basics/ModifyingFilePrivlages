@@ -1,9 +1,19 @@
-Modifying File Privlages - read, write, execute permissions
+# Modifying File Privlages - read, write, execute permissions
 
-When creating files, global premissions should not be assumed.  
-If the files that are created/generated are to be used by more than the immediate user, permissions must be granted.
+# When creating files, global premissions should not be assumed.  
+# If the files that are created/generated are to be used by more than the immediate user, permissions must be granted.
 
-File permissons are designated in a 3 X 3 letter code:  the first set of three represents the logged-in users privalages; the second represents the group's privalages; and the third represents all users
-Example:  rwxrw-r-- would translate into full privalges for the logged in user read and write privalages for the group and read only for all users. Letters denote permission granted and dashes denote no permission,
+# File permissons are designated in a 3 X 3 letter code:  the first set of three represents the logged-in users privalages; the second represents the group's privalages; and the third represents all users
+# Example:  rwxrw-r-- would translate into full privalges for the logged in user read and write privalages for the group and read only for all users. Letters denote permission granted and dashes denote no permission,
 
-These can be altered by the creator or an administrator using the commands 'chmod' and 'chgrp'.
+# These can be altered by the creator or an administrator using the commands 'chmod' and 'chgrp'.
+
+Summary - Changing file permissions and attributes
+
+$ chmod 755 file      Changes the permissions of file to be rwx for the owner, and rx for 
+                      the group and the world. (7 = rwx = 111 binary. 5 = r-x = 101 binary)
+$ chgrp user file     Makes file belong to the group user.
+$ chown cliff file    Makes cliff the owner of file.
+$ chown -R cliff dir  Makes cliff the owner of dir and everything in its directory tree. 
+
+# You must be the owner of the file/directory or be root before you can do any of these things.
