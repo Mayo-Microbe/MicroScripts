@@ -1,0 +1,23 @@
+# To access next generation sequencing data (.bam files) in the delivery area
+
+# Change directory to the location where you want to move the archive data, then:
+
+$ ftp research-archive
+
+# Enter mfad\<username> on prompt
+
+# Enter password on prompt
+
+$ cd to/location/indicated/in/the/email/recieved/from/scott/lundt
+
+$ mget $<filename.bam>
+
+# alternatively and for multiple files:
+
+$ mget *.bam
+
+# .bam files will be moved to the current (non-FTP) directory
+
+# To exit the FTP:
+
+$ exit
