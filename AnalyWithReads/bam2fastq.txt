@@ -1,0 +1,5 @@
+# When data is placed in the archive, it is stored as a bam file.  We can only do analysis on fastq files,
+# so we need to convert the stored bam file in the archive back to fastq data.
+# to do this we use samtools bam2fq
+
+$ sam
