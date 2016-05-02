@@ -2,4 +2,7 @@
 # so we need to convert the stored bam file in the archive back to fastq data.
 # to do this we use samtools bam2fq
 
-$ sam
+$ samtools bam2fq <SAMPLE.bam> > <SAMPLE.fastq>
+
+#This WILL NOT compress the file, you probably want to do that for space, so do this instead:
+$ samtools bam2fq <SAMPLE.bam> | bgzip > <SAMPLE.fastq.gz>
