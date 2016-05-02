@@ -1,0 +1,14 @@
+# To cleanup reads, first you need to tell the cleanup script about the sample name and files.  Make a file like this:
+
+-----------------------------------------------------------
+ALIAS=WGS019a
+MP1_1=WGS019a-LMP.FC000000000-AEG2F_L1_R1_ITGACCA.fastq.gz
+MP1_2=WGS019a-LMP.FC000000000-AEG2F_L1_R2_ITGACCA.fastq.gz
+PE_1=WGS019a-PE.FC000000000-AEG2F_L1_R1_IAGTTCC.fastq.gz
+PE_2=WGS019a-PE.FC000000000-AEG2F_L1_R2_IAGTTCC.fastq.gz
+-----------------------------------------------------------
+
+#make sure to change the names in this example file so they match the files you want to process.
+
+it has to be in a file called read_description.sh in order for it to work... 
+
