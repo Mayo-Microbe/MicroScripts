@@ -1,6 +1,6 @@
 # To access next generation sequencing data (.bam files) in the delivery area
 
-# Change directory to the location where you want to move the archive data, then:
+# Change directory to the location where you want to move the archive data (make sure you have write access to the directory), then:
 
 $ ftp research-archive
 
@@ -8,7 +8,13 @@ $ ftp research-archive
 
 # Enter password on prompt
 
-$ cd to/location/indicated/in/the/email/recieved/from/scott/lundt
+$ cd /data2/delivery/Patel_Robin_rxp04/<RUN_ID>/primary
+
+# where <RUN_ID> is something like 151229_M00710_0086_000000000-AH8BH 
+
+# note that when you are in ftp, you can use local commands (e.g. pwd) by escaping them with a !
+$ !pwd
+$ !ls
 
 $ mget $<filename.bam>
 
@@ -21,3 +27,6 @@ $ mget *.bam
 # To exit the FTP:
 
 $ exit
+
+#### sometimes FTP is just a big pain... try investigating the following other commands:
+$ lftp
