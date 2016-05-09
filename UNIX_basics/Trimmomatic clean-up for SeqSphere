@@ -1,0 +1,16 @@
+# Call Trimmomatic:
+
+$ module load trimmomatic
+
+# Trimmomatic Command:
+
+$ Trimmomatic PE -threads 16 <INPUT_R1_IGAGATTCC-GTACTGAC.fastq.gz> <Input_R2_IGAGATTCC-GTACTGAC.fastq.gz> <Output_R1_trimmed_paired_IGAGATTCC-GTACTGAC.fastq.gz> 
+<Output_R1_trimmed_unpaired_IGAGATTCC-GTACTGAC.fastq.gz> <Output_R2_trimmed_paired_IGAGATTCC-GTACTGAC.fastq.gz> <Ouput_R2_trimmed_unpaired_IGAGATTCC-GTACTGAC.fastq.gz> 
+ILLUMINACLIP:/data2/microbiome/db/Adapters2.fa:2:30:10
+
+# Example:
+
+$ Trimmomatic PE -threads 16 MZ16.FC000000000-ALUT7_L1_R1_IGAGATTCC-GTACTGAC.fastq.gz MZ16.FC000000000-ALUT7_L1_R2_IGAGATTCC-GTACTGAC.fastq.gz 
+MZ16.FC000000000-ALUT7_L1_R1_trimmed_unpaired_IGAGATTCC-GTACTGAC.fastq.gz MZ16.FC000000000-ALUT7_L1_R1_trimmed_paired_IGAGATTCC-GTACTGAC.fastq.gz 
+MZ16.FC000000000-ALUT7_L1_R2_trimmed_unpaired_IGAGATTCC-GTACTGAC.fastq.gz MZ16.FC000000000-ALUT7_L1_R2_trimmed_paired_IGAGATTCC-GTACTGAC.fastq.gz 
+ILLUMINACLIP:/data2/microbiome/db/Adapters2.fa:2:30:10
