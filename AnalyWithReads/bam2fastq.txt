@@ -6,3 +6,6 @@ $ samtools bam2fq <SAMPLE.bam> > <SAMPLE.fastq>
 
 #This WILL NOT compress the file, you probably want to do that for space, so do this instead:
 $ samtools bam2fq <SAMPLE.bam> | bgzip > <SAMPLE.fastq.gz>
+
+# To split the reads (forward/reverse) and compress, use this command line:
+$ samtools fastq -1 <output_R1.fastq> -2 output_R2.fastq <inputfile.bam> | gzip <output_R1.fastq> | gzip <output_R2.fastq>
