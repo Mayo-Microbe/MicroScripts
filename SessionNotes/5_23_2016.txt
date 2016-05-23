@@ -17,6 +17,11 @@ first, we needed to get a copy of the cleanup.sh command.  This version of the c
 
 cp /data2/microbiome/clinical/assembly_runs/TechnicalReplicates2/cleanup.sh .
 
+then we need to run qsub:
+qsub -pe threaded 16 -t 1 -N BTP_149 -V -j y  cleanup.sh
+
+to see what is running:
+$ qstat
 
 # assemble cleaned data
 
