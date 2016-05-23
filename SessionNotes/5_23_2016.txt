@@ -13,6 +13,11 @@ Cleanup, Assembly and Construction of Reference Genome
 
 # execute cleanup.sh command
 
+first, we needed to get a copy of the cleanup.sh command.  This version of the command
+
+cp /data2/microbiome/clinical/assembly_runs/TechnicalReplicates2/cleanup.sh .
+
+
 # assemble cleaned data
 
 # manual BLAST search to locate reference genome
