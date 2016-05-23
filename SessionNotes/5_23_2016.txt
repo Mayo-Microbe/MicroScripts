@@ -17,6 +17,17 @@ first, we needed to get a copy of the cleanup.sh command.  This version of the c
 
 cp /data2/microbiome/clinical/assembly_runs/TechnicalReplicates2/cleanup.sh .
 
+Create the following file:
+----------------------------------------------------
+$ cat read_description.sh
+ALIAS=BTP_149
+MP1_1=BTP_149-MP.FC000000000-AKCKW_L1_R1_ICTTGTA.fastq.gz
+MP1_2=BTP_149-MP.FC000000000-AKCKW_L1_R2_ICTTGTA.fastq.gz
+PE_1=BTP_149-PE.FC000000000-AKCKW_L1_R1_ICTTGTA.fastq.gz
+PE_2=BTP_149-PE.FC000000000-AKCKW_L1_R2_ICTTGTA.fastq.gz
+
+----------------------------------------------------
+
 then we need to run qsub:
 qsub -pe threaded 16 -t 1 -N BTP_149 -V -j y  cleanup.sh
 
