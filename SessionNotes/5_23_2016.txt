@@ -7,5 +7,15 @@ Issue!  Samtools version 1.1 does not behave the same as Samtools v1.3.  Make su
 
 qsub -pe threaded 16 -t 1 -N BTP_149 -V -j y  cleanup.sh
 
+******************************************************
+Cleanup, Assembly and Construction of Reference Genome
+******************************************************
 
+# execute cleanup.sh command
+
+# assemble cleaned data
+
+# manual BLAST search to locate reference genome
+
+# Provide Julie data for pipline
 
