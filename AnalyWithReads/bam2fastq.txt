@@ -8,4 +8,4 @@ $ samtools bam2fq <SAMPLE.bam> > <SAMPLE.fastq>
 $ samtools bam2fq <SAMPLE.bam> | bgzip > <SAMPLE.fastq.gz>
 
 # To split the reads (forward/reverse) and compress, use this command line:
-$ samtools fastq -1 <output_R1.fastq> -2 output_R2.fastq <inputfile.bam> | gzip <output_R1.fastq> | gzip <output_R2.fastq>
+$ samtools bam2fq -s BTP_149-MP.FC000000000-AKCKW_L1_R1_ICTTGTA.fastq.gz -s BTP_149-MP.FC000000000-AKCKW_L1_R2_ICTTGTA.fastq.gz BTP_149-MP.FC000000000-AKCKW_L1_ICAGATC.bam>
